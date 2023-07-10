@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Chicago Bulls FG% Data",
     "section": "",
-    "text": "The Chicago Bulls had a great season this year, qualifying for the NBA Play-in tournament and eliminating the Toronto Raptors. The following data was pulled from FantasyPros, a website that provides fantasy sports data & content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. For the 2022-2023 NBA Season, the Chicago Bulls’ estimated average field goal percentage was 49.2%, represented by the dotted black line on the histogram."
+    "text": "The Chicago Bulls had a great season this year, qualifying for the NBA Play-In Tournament and eliminating the Toronto Raptors. The following data was pulled from FantasyPros, a website that provides fantasy sports data & content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. For the 2022-2023 NBA Season, the Chicago Bulls’ estimated average field goal percentage was 49.2%, represented by the dotted black line on the histogram."
   },
   {
     "objectID": "models.html",
