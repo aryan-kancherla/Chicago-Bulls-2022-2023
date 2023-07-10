@@ -7,6 +7,13 @@
     "text": "My name is Aryan Kancherla, a rising senior at Metea Valley High School. Some of my hobbies include basketball, ping pong, and spending time with friends & family. I have a passion for computer and data science, where I have used Python, Java, Swift, and R."
   },
   {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
+    "section": "",
+    "text": "My name is Aryan Kancherla, a rising senior at Metea Valley High School. Some of my hobbies include basketball, ping pong, and spending time with friends & family. I have a passion for computer and data science, where I have used Python, Java, Swift, and R."
+  },
+  {
     "objectID": "about.html#about-this-project",
     "href": "about.html#about-this-project",
     "title": "About",
@@ -19,6 +26,13 @@
     "title": "About",
     "section": "Contact Information",
     "text": "Contact Information\nEmail: aryankancherla21@gmail.com\nGithub: https://github.com/aryan-kancherla/\nLinkedin: https://www.linkedin.com/in/aryan-kancherla-a646b1263/"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Chicago Bulls FG% Data",
+    "section": "",
+    "text": "The Chicago Bulls had a great shooting season this year, ranked just under the 2022-2023 NBA Champions, the Denver Nuggets. The following data was pulled from FantasyPros, a website that provides fantasy sports data & content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. In the 2022-2023 NBA Season, the Chicago Bulls’ estimated average field goal percentage was 49.2%, represented by the dotted black line on the histogram."
   },
   {
     "objectID": "models.html",
@@ -40,19 +54,5 @@
     "title": "Sources",
     "section": "",
     "text": "I used an NBA 2022-2023 Player Statistics data set for this project, which I found through FantasyPros, a website that provides fantasy sports data & content.\nBefore creating my model, I had to clean the data first. I filtered the data set, analyzing only the NBA players from the Chicago Bulls. Upon examining this newly filtered data, I noticed a couple of outliers: some of the Chicago Bulls players hardly played any games in the 2022-2023 NBA season, due to injuries, 2-way contracts, etc.. By removing these outliers, the data would be more accurate. After removing the outliers, I created my fitted model, which I used to create the histogram."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Chicago Bulls FG% Data",
-    "section": "",
-    "text": "The Chicago Bulls had a great shooting season this year, ranked just under the 2022-2023 NBA Champions, the Denver Nuggets. The following data was pulled from FantasyPros, a website that provides fantasy sports data & content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. In the 2022-2023 NBA Season, the Chicago Bulls’ estimated average field goal percentage was 49.2%."
-  },
-  {
-    "objectID": "about.html#about-me",
-    "href": "about.html#about-me",
-    "title": "About",
-    "section": "",
-    "text": "My name is Aryan Kancherla, a rising senior at Metea Valley High School. Some of my hobbies include basketball, ping pong, and spending time with friends & family. I have a passion for computer and data science, where I have used Python, Java, Swift, and R."
   }
 ]
