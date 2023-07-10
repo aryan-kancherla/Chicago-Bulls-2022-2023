@@ -42,13 +42,6 @@
     "text": "stan_glm\n family:       gaussian [identity]\n formula:      `FG%` ~ 1\n observations: 13\n predictors:   1\n------\n            Median MAD_SD\n(Intercept) 0.5    0.0   \n\nAuxiliary parameter(s):\n      Median MAD_SD\nsigma 0.1    0.0   \n\n------\n* For help interpreting the printed output see ?print.stanreg\n* For info on the priors used see ?prior_summary.stanreg"
   },
   {
-    "objectID": "models.html#mathmatical-model",
-    "href": "models.html#mathmatical-model",
-    "title": "models",
-    "section": "",
-    "text": "stan_glm\n family:       gaussian [identity]\n formula:      `FG%` ~ 1\n observations: 13\n predictors:   1\n------\n            Median MAD_SD\n(Intercept) 0.5    0.0   \n\nAuxiliary parameter(s):\n      Median MAD_SD\nsigma 0.1    0.0   \n\n------\n* For help interpreting the printed output see ?print.stanreg\n* For info on the priors used see ?prior_summary.stanreg"
-  },
-  {
     "objectID": "sources.html",
     "href": "sources.html",
     "title": "Sources",
