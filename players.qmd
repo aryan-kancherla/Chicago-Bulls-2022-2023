@@ -27,7 +27,7 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
 ) |>
   filter(Team == "CHI") |>
     arrange(desc(MIN)) |>
-      filter(MP >= 1000)
+      filter(MIN >= 1000)
 
 #NBA_Data <- tibble(NBA_Data)
 NBA_Data
