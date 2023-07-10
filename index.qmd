@@ -25,7 +25,6 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   filter(Team == "CHI") |>
     filter(`GP` > 10)
 
-NBA_Data
 ```
 
 ```{r}
