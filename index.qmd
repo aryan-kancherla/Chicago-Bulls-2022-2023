@@ -1,12 +1,12 @@
 ---
-title: "Chicago Bulls Field Goal Percentage Data"
+title: "Chicago Bulls Field Goal Percentage Prediction"
 author: "Aryan Kancherla"
 execute: 
   echo: false
   warning: false
 ---
 
-The Chicago Bulls had a great season this year, qualifying for the NBA Play-In Tournament and eliminating the Toronto Raptors. The following data was pulled from FantasyPros, a website that provides fantasy sports data & content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. For the 2023-2024 NBA Season, the Chicago Bulls' estimated average field goal percentage is 49.2%, represented by the dotted black line on the histogram. 
+The Chicago Bulls had a great season this year, qualifying for the NBA Play-In Tournament and eliminating the Toronto Raptors. The following data was pulled from FantasyPros, a website that provides fantasy sports data & content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. For the 2023-2024 NBA Season, the Chicago Bulls' predicted average field goal percentage is 49.2%, represented by the dotted black line on the histogram. 
 
 ```{r}
 #| message: false
@@ -47,7 +47,7 @@ pe <- posterior_epred(object = fit_obj, newdata = newobs) |>
 ```
 
 ```{r}
-plot_var <- pe |> 
+pe |> 
   ggplot(aes(x = `1`)) +
     geom_histogram(aes(y = after_stat(count/sum(count))), fill = "red", color = "black", bins = 100) +
       geom_vline(xintercept = median(pe$`1`), linetype = "dotted", lwd = 1.5) + 
@@ -61,5 +61,4 @@ plot_var <- pe |>
           scale_y_continuous(labels = scales::percent_format()) +
             theme_classic()
 
-ggplotly(plot_var)
 ```

@@ -14,6 +14,7 @@ library(ggplot2)
 library(plotly)
 ```
 
+The interactive scatterplot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season. 
 
 ```{r}
 #| message: false
@@ -26,10 +27,10 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
 ) |>
   filter(Team == "CHI") |>
     arrange(desc(MIN)) |>
-      filter(GP >= 60)
+      filter(MP >= 1000)
 
 #NBA_Data <- tibble(NBA_Data)
-
+NBA_Data
 ```
 
 ```{r}
@@ -37,9 +38,11 @@ BullsPlayerPlot <- NBA_Data |>
     ggplot(
       aes(
         x = Player, 
-        y = `FG%`
+        y = `FG%`,
+        fill = "red",
+        color = "black"
         )) +
-      geom_point(aes(fill = Player), stat = "identity") + 
+      geom_point(stat = "identity") + 
           labs(
             title = "Individual Player Field Goal Percentages",
             subtitle = "All the players on this graph have played at least 60 games during the 2022-2023 season ",
@@ -52,4 +55,8 @@ BullsPlayerPlot <- NBA_Data |>
 ggplotly(BullsPlayerPlot)
 ```
 
+
+## Plot Summary
+
+The scatterplot above shows that out of all the Chicago Bulls players that had played at least 1000 minutes, Nikola Vucevic had the highest FG%. I believe this result to be accurate as Nikola Vucevic has played a significant amount of minutes (2746 to be exact) during the 2022-2023 NBA Season. Also, Vucevic's position (Center) requires him to take frequent layups, dunks, and mid-range shots, validating his FG%. 
 
