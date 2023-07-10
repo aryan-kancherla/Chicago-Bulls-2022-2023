@@ -1,6 +1,8 @@
 ---
-title: "About Me"
+title: "About"
 ---
+
+## About Me
 
 My name is Aryan Kancherla, a rising senior at Metea Valley High School. Some of my hobbies include basketball, ping pong, and spending time with friends & family. I have a passion for computer and data science, where I have used Python, Java, Swift, and R. 
 
@@ -10,7 +12,7 @@ My passion of basketball led me to analyze the Chicago Bulls' Shooting Data. Fro
 
 ## Contact Information
 
-Email: [aryankancherla21@gmail.com](aryankancherla21@gmail.com)
+Email: aryankancherla21@gmail.com
 
 Github: [https://github.com/aryan-kancherla/](https://github.com/aryan-kancherla/)
 
