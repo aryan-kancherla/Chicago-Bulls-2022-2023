@@ -1,16 +1,44 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Chicago-Bulls-2022-2023",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "My name is Aryan Kancherla, a rising senior at Metea Valley High School. Some of my hobbies include basketball, ping pong, and spending time with friends & family. I have a passion for computer and data science, where I have used Python, Java, Swift, and R."
+  },
+  {
+    "objectID": "about.html#about-this-project",
+    "href": "about.html#about-this-project",
+    "title": "About Me",
+    "section": "About This Project",
+    "text": "About This Project\nMy passion of basketball led me to analyze the Chicago Bulls’ Shooting Data. From the knowledge I obtained through Kane’s Data Science Bootcamp, a 6-week data science course, I was able to analyze and create graphs & models, coming up with interesting results."
+  },
+  {
+    "objectID": "about.html#contact-information",
+    "href": "about.html#contact-information",
+    "title": "About Me",
+    "section": "Contact Information",
+    "text": "Contact Information\nEmail: aryankancherla21@gmail.com\nGithub: https://github.com/aryan-kancherla/\nLinkedin: https://www.linkedin.com/in/aryan-kancherla-a646b1263/"
+  },
+  {
+    "objectID": "models.html",
+    "href": "models.html",
+    "title": "models",
+    "section": "",
+    "text": "stan_glm\n family:       gaussian [identity]\n formula:      `FG%` ~ 1\n observations: 13\n predictors:   1\n------\n            Median MAD_SD\n(Intercept) 0.5    0.0   \n\nAuxiliary parameter(s):\n      Median MAD_SD\nsigma 0.1    0.0   \n\n------\n* For help interpreting the printed output see ?print.stanreg\n* For info on the priors used see ?prior_summary.stanreg"
+  },
+  {
+    "objectID": "models.html#mathmatical-model",
+    "href": "models.html#mathmatical-model",
+    "title": "models",
+    "section": "",
+    "text": "stan_glm\n family:       gaussian [identity]\n formula:      `FG%` ~ 1\n observations: 13\n predictors:   1\n------\n            Median MAD_SD\n(Intercept) 0.5    0.0   \n\nAuxiliary parameter(s):\n      Median MAD_SD\nsigma 0.1    0.0   \n\n------\n* For help interpreting the printed output see ?print.stanreg\n* For info on the priors used see ?prior_summary.stanreg"
+  },
+  {
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Sources",
+    "section": "",
+    "text": "I used an NBA 2022-2023 Player Statistics data set for this project, which I found through FantasyPros, a website that provides fantasy sports data & content.\nBefore creating my model, I had to clean the data first. I filtered the data set, analyzing only the NBA players from the Chicago Bulls. Upon examining this newly filtered data, I noticed a couple of outliers: some of the Chicago Bulls players hardly played any games in the 2022-2023 NBA season, due to injuries, 2-way contracts, etc.. By removing these outliers, the data would be more accurate. After removing the outliers, I created my fitted model, which I used to create the histogram."
   }
 ]
