@@ -10,7 +10,6 @@ execute:
 library(tidyverse)
 library(rstanarm)
 library(readr)
-library(janitor)
 library(ggplot2)
 ```
 
