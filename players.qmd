@@ -1,0 +1,55 @@
+---
+title: "players"
+editor: visual
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(rstanarm)
+library(readr)
+library(ggplot2)
+library(plotly)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
+  Player = col_character(),
+  Team = col_character(),
+  Positions = col_character()
+  )
+) |>
+  filter(Team == "CHI") |>
+    arrange(desc(MIN)) |>
+      filter(GP >= 60)
+
+#NBA_Data <- tibble(NBA_Data)
+
+```
+
+```{r}
+BullsPlayerPlot <- NBA_Data |>
+    ggplot(
+      aes(
+        x = Player, 
+        y = `FG%`
+        )) +
+      geom_point(aes(fill = Player), stat = "identity") + 
+          labs(
+            title = "Individual Player Field Goal Percentages",
+            subtitle = "All the players on this graph have played at least 60 games during the 2022-2023 season ",
+            x = "Players",
+            y = "Field Goal Percentage",
+            caption = "Source: FantasyPros"
+          ) + theme_classic() + 
+          theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplotly(BullsPlayerPlot)
+```
+
+

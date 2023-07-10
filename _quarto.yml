@@ -10,6 +10,7 @@ website:
       - models.qmd
       - about.qmd
       - sources.qmd
+      - players.qmd
 
 format:
   html:
