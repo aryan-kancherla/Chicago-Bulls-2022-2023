@@ -7,10 +7,10 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - players.qmd
       - models.qmd
       - about.qmd
       - sources.qmd
-      - players.qmd
 
 format:
   html:
