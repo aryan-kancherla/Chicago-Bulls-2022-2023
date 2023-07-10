@@ -2,16 +2,18 @@ project:
   type: website
 
 website:
-  title: "Chicago-Bulls-2022-2023"
+  title: "Chicago Bulls 2022-2023 FG% Data"
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - models.qmd
       - about.qmd
+      - sources.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
     toc: true
 

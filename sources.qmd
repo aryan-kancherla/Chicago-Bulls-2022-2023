@@ -1,0 +1,9 @@
+---
+title: "Sources"
+editor: visual
+---
+
+I used an [NBA 2022-2023 Player Statistics](https://www.fantasypros.com/nba/stats/overall.php) data set for this project, which I found through [FantasyPros](https://www.fantasypros.com/), a website that provides fantasy sports data & content.
+
+
+Before creating my model, I had to clean the data first. I filtered the data set, analyzing only the NBA players from the Chicago Bulls. Upon examining this newly filtered data, I noticed a couple of outliers: some of the Chicago Bulls players hardly played any games in the 2022-2023 NBA season, due to injuries, 2-way contracts, etc.. By removing these outliers, the data would be more accurate. After removing the outliers, I created my fitted model, which I used to create the histogram. 

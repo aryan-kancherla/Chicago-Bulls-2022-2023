@@ -1,11 +1,59 @@
 ---
-title: "Chicago-Bulls-2022-2023"
+title: "Chicago Bulls FG% Data"
+execute: 
+  echo: false
+  warning: false
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+```{r}
+#| message: false
+library(tidyverse)
+library(rstanarm)
+library(readr)
+library(janitor)
+library(ggplot2)
+```
 
 ```{r}
-1 + 1
+#| message: false
+#| warning: false
+NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
+  Player = col_character(),
+  Team = col_character(),
+  Positions = col_character()
+  )
+) |> 
+  filter(Team == "CHI") |>
+    filter(`GP` > 10)
+```
+
+```{r}
+#| message: false
+
+fit_obj <- stan_glm(data = NBA_Data, 
+                    formula = `FG%` ~ 1, 
+                    family = gaussian, 
+                    refresh = 0,
+                    seed = 9)
+
+newobs <- tibble(.rows = 1)
+
+pe <- posterior_epred(object = fit_obj, newdata = newobs) |> 
+  as_tibble()
+```
+
+```{r}
+pe |> 
+  ggplot(aes(x = `1`)) +
+    geom_histogram(aes(y = after_stat(count/sum(count))), fill = "red", color = "black", bins = 100) +
+      geom_vline(xintercept = median(pe$`1`), linetype = "dotted", lwd = 1.5) + 
+       labs(title = "Estimated Team FG% of the Chicago Bulls",
+         subtitle = "The values in this graph are estimated",
+         x = "Estimated FG%",
+         y = "Probability",
+         caption = "Source: FantasyPros"
+         ) +
+  scale_x_continuous(labels = scales::number_format(accuracy = 0.01))+
+          scale_y_continuous(labels = scales::percent_format()) +
+            theme_classic()
 ```

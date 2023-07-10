@@ -1,0 +1,46 @@
+---
+title: "models"
+editor: visual
+execute: 
+  echo: false
+---
+
+## Mathmatical Model
+
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(rstanarm)
+library(readr)
+library(janitor)
+library(ggplot2)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
+  Player = col_character(),
+  Team = col_character(),
+  Positions = col_character()
+  )
+) |> 
+  filter(Team == "CHI") |>
+    filter(`GP` > 10)
+```
+
+```{r}
+#| message: false
+#| warning: false
+fit_obj <- stan_glm(data = NBA_Data, 
+                    formula = `FG%` ~ 1, 
+                    family = gaussian, 
+                    refresh = 0,
+                    seed = 9)
+
+fit_obj
+```
+
