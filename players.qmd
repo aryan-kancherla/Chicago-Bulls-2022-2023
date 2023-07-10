@@ -29,8 +29,7 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
     arrange(desc(MIN)) |>
       filter(MIN >= 1000)
 
-#NBA_Data <- tibble(NBA_Data)
-NBA_Data
+
 ```
 
 ```{r}
