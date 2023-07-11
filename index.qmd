@@ -27,7 +27,10 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   )
 ) |> 
   filter(Team == "CHI") |>
-    filter(`GP` > 10)
+    filter(`GP` > 30)
+
+NBA_Data
+#Add comment about filter process
 
 ```
 
@@ -44,6 +47,7 @@ newobs <- tibble(.rows = 1)
 
 pe <- posterior_epred(object = fit_obj, newdata = newobs) |> 
   as_tibble()
+
 ```
 
 ```{r}
@@ -60,5 +64,7 @@ pe |>
   scale_x_continuous(labels = scales::number_format(accuracy = 0.01))+
           scale_y_continuous(labels = scales::percent_format()) +
             theme_classic()
+
+# Add comment about geom_vline(0)
 
 ```

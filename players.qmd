@@ -26,8 +26,8 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   )
 ) |>
   filter(Team == "CHI") |>
-    arrange(desc(MIN)) |>
-      filter(MIN >= 1000)
+    arrange(desc(MIN))|>
+      filter(MIN > 850)
 
 
 ```
@@ -38,20 +38,19 @@ BullsPlayerPlot <- NBA_Data |>
       aes(
         x = Player, 
         y = `FG%`,
-        fill = "red",
-        color = "black"
+        fill = Player,
+        text = paste("Player: ", Player, "\n", "FG%: ", (`FG%` * 100), sep = "")
         )) +
-      geom_point(stat = "identity") + 
+      geom_point( stat = "identity") + 
           labs(
-            title = "Individual Player Field Goal Percentages",
-            subtitle = "All the players on this graph have played at least 60 games during the 2022-2023 season ",
             x = "Players",
             y = "Field Goal Percentage",
             caption = "Source: FantasyPros"
           ) + theme_classic() + 
           theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-ggplotly(BullsPlayerPlot)
+ggplotly(BullsPlayerPlot, tooltip = "text") |>
+  layout(title = list(text = paste('Individual Player Field Goal Percentages for the 2022-2023 NBA Season', '<br>', '<sup>', 'Vucevic had the highest field goal percentage(52%)', '</sup>')))
 ```
 
 
