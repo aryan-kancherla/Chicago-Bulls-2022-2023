@@ -48,8 +48,6 @@ newobs <- tibble(.rows = 1)
 pe <- posterior_epred(object = fit_obj, newdata = newobs) |> 
   as_tibble()
 
-pe
-
 ```
 
 ```{r}

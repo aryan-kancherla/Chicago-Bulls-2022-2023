@@ -1,5 +1,4 @@
 ---
-title: "models"
 editor: visual
 execute: 
   echo: false
@@ -8,8 +7,6 @@ execute:
 ## What is the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season, given that each player has played more than 30 games?
 
 To answer this question, I filtered the data, selecting all the players of the Chicago Bulls that have played more than 30 games. Using this data, I then created a fitted model, using the Field Goal Percentage of each player as the parameter:
-
-
 
 ```{r}
 #| message: false
