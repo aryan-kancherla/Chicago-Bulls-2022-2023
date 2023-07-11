@@ -113,7 +113,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games" id="toc-what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games" class="nav-link active" data-scroll-target="#what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games">What is the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season, given that each player has played more than 30 games?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -135,6 +141,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games">What is the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season, given that each player has played more than 30 games?</h2>
+<p>To answer this question, I filtered the data, selecting all the players of the Chicago Bulls that have played more than 30 games. Using this data, I then created a fitted model, using the Field Goal Percentage of each player as the parameter:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>stan_glm
@@ -155,8 +164,29 @@ sigma 0.1    0.0
 * For info on the priors used see ?prior_summary.stanreg</code></pre>
 </div>
 </div>
+<p>This fitted model of the data was then used to create the posterior estimated prediction model. The Posterior Estimated Prediction model calculates the predicted value based on the data the model was given:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4,000 × 1
+     `1`
+   &lt;dbl&gt;
+ 1 0.481
+ 2 0.504
+ 3 0.507
+ 4 0.517
+ 5 0.508
+ 6 0.491
+ 7 0.515
+ 8 0.501
+ 9 0.505
+10 0.530
+# ℹ 3,990 more rows</code></pre>
+</div>
+</div>
+<p>All of the values above are predicted values of the Chicago Bulls’ 2023-2024 Field Goal Percentage. Taking the average of these predicted values reveals the most accurate prediction, which is 49.2%.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
