@@ -51,7 +51,7 @@ pe |>
   ggplot(aes(x = `1`)) +
     geom_histogram(aes(y = after_stat(count/sum(count))), fill = "red", color = "black", bins = 100) +
       geom_vline(xintercept = median(pe$`1`), linetype = "dotted", lwd = 1.5) + 
-       labs(title = "The Chicago Bulls Predicted Field Goal Percentage for the 2023-2024 NBA Season",
+       labs(title = "The Chicago Bulls Predicted Field Goal % for the 2023-2024 NBA Season",
          subtitle = "It is likely that the Field Goal Percentage will be 49.2% next season",
          x = "Estimated FG%",
          y = "Probability",
