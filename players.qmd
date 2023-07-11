@@ -39,9 +39,9 @@ BullsPlayerPlot <- NBA_Data |>
         x = Player, 
         y = `FG%`,
         fill = Player,
-        text = paste("Player: ", Player, "\n", "FG%: ", (`FG%` * 100), sep = "")
+        text = paste("Player: ", Player, "\n", "Position: ", Positions, "\n", "FG%: ", (`FG%` * 100),  sep = "")
         )) +
-      geom_point( stat = "identity") + 
+      geom_point(stat = "identity") + 
           labs(
             x = "Players",
             y = "Field Goal Percentage",

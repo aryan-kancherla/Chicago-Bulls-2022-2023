@@ -30,7 +30,7 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
     filter(`GP` > 30) |>
       select(`Player`, `FG%`)
 
-#Add comment about filter process
+#Note:Add comment about filter process
 
 ```
 
@@ -65,6 +65,6 @@ pe |>
           scale_y_continuous(labels = scales::percent_format()) +
             theme_classic()
 
-# Add comment about geom_vline(0)
+#Note: Add comment about geom_vline(0)
 
 ```
