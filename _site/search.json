@@ -46,7 +46,7 @@
     "href": "players.html",
     "title": "players",
     "section": "",
-    "text": "The interactive scatterplot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season.\n# A tibble: 8 × 18\n  Player   Team  Positions   PTS   REB   AST   BLK   STL `FG%` `FT%` `3PM`    TO\n  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Zach La… CHI   SG,SF      1913   345   326    18    69 0.485 0.848   204   194\n2 Nikola … CHI   C          1447   903   266    57    60 0.52  0.835   121   139\n3 DeMar D… CHI   SF,PF,SG   1816   343   377    36    83 0.504 0.872    46   153\n4 Patrick… CHI   SF,PF       833   327   100    70    72 0.464 0.857   115   101\n5 Ayo Dos… CHI   PG,SG       687   220   206    26    62 0.493 0.805    59    99\n6 Patrick… CHI   PG,SG       415   247   194    41    63 0.4   0.723    80    60\n7 Coby Wh… CHI   PG,SG       715   212   204     6    54 0.443 0.871   128    74\n8 Alex Ca… CHI   PG,SG       374   196   193    46    98 0.455 0.808    55    77\n# ℹ 6 more variables: GP &lt;dbl&gt;, MIN &lt;dbl&gt;, FTM &lt;dbl&gt;, `2PM` &lt;dbl&gt;,\n#   `A/TO` &lt;dbl&gt;, PF &lt;dbl&gt;"
+    "text": "The interactive scatterplot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season."
   },
   {
     "objectID": "players.html#plot-summary",
