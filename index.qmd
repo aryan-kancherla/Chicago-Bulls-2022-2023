@@ -29,7 +29,6 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   filter(Team == "CHI") |>
     filter(`GP` > 30)
 
-NBA_Data
 #Add comment about filter process
 
 ```

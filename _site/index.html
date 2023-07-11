@@ -144,6 +144,28 @@ ul.task-list li input[type="checkbox"] {
 
 <p>The Chicago Bulls had a great season this year, qualifying for the NBA Play-In Tournament and eliminating the Toronto Raptors. The following data was pulled from FantasyPros, a website that provides fantasy sports data &amp; content. Then, the data was filtered to look at the statistics of all the Chicago Bulls players. Finally, I created a Bayesian Prediction Model estimating the Field Goal Percentage of the Chicago Bulls Team. For the 2023-2024 NBA Season, the Chicago Bulls’ predicted average field goal percentage is 49.2%, represented by the dotted black line on the histogram.</p>
 <div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 13 × 18
+   Player  Team  Positions   PTS   REB   AST   BLK   STL `FG%` `FT%` `3PM`    TO
+   &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 Zach L… CHI   SG,SF      1913   345   326    18    69 0.485 0.848   204   194
+ 2 DeMar … CHI   SF,PF,SG   1816   343   377    36    83 0.504 0.872    46   153
+ 3 Nikola… CHI   C          1447   903   266    57    60 0.52  0.835   121   139
+ 4 Patric… CHI   SF,PF       833   327   100    70    72 0.464 0.857   115   101
+ 5 Coby W… CHI   PG,SG       715   212   204     6    54 0.443 0.871   128    74
+ 6 Ayo Do… CHI   PG,SG       687   220   206    26    62 0.493 0.805    59    99
+ 7 Patric… CHI   PG,SG       415   247   194    41    63 0.4   0.723    80    60
+ 8 Andre … CHI   C           399   444    33    27    45 0.606 0.536     0    75
+ 9 Alex C… CHI   PG,SG       374   196   193    46    98 0.455 0.808    55    77
+10 Derric… CHI   SG,SF       319   153    34    37    29 0.5   0.738    27    25
+11 Javont… CHI   PG,SG       165    88    23    21    24 0.565 0.667    13    20
+12 Terry … CHI   SG           89    47    10     6     3 0.52  0.546     5     9
+13 Dalen … CHI   PG           85    37    22     5    11 0.444 0.667     7     8
+# ℹ 6 more variables: GP &lt;dbl&gt;, MIN &lt;dbl&gt;, FTM &lt;dbl&gt;, `2PM` &lt;dbl&gt;,
+#   `A/TO` &lt;dbl&gt;, PF &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
