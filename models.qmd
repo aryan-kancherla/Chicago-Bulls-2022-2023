@@ -44,6 +44,7 @@ fit_obj <- stan_glm(data = NBA_Data,
                     refresh = 0,
                     seed = 9)
 
+fit_obj
 ```
 
 This fitted model of the data was then used to create the posterior estimated prediction model. The Posterior Estimated Prediction model calculates the predicted value based on the data the model was given:

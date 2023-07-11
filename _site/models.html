@@ -144,26 +144,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-the-predicted-field-goal-percentage-of-the-chicago-bulls-for-the-2023-2024-nba-season-given-that-each-player-has-played-more-than-30-games">What is the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season, given that each player has played more than 30 games?</h2>
 <p>To answer this question, I filtered the data, selecting all the players of the Chicago Bulls that have played more than 30 games. Using this data, I then created a fitted model, using the Field Goal Percentage of each player as the parameter:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>stan_glm
- family:       gaussian [identity]
- formula:      `FG%` ~ 1
- observations: 13
- predictors:   1
-------
-            Median MAD_SD
-(Intercept) 0.5    0.0   
-
-Auxiliary parameter(s):
-      Median MAD_SD
-sigma 0.1    0.0   
-
-------
-* For help interpreting the printed output see ?print.stanreg
-* For info on the priors used see ?prior_summary.stanreg</code></pre>
-</div>
-</div>
 <p>This fitted model of the data was then used to create the posterior estimated prediction model. The Posterior Estimated Prediction model calculates the predicted value based on the data the model was given:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -184,6 +164,7 @@ sigma 0.1    0.0
 </div>
 </div>
 <p>All of the values above are predicted values of the Chicago Bulls’ 2023-2024 Field Goal Percentage. Taking the average of these values reveals the most accurate prediction, which is 49.2%. This means that the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season is 49.2%, given that each player has played more than 30 games during the season.</p>
+<p>However, there is a level of uncertainty associated to this result. Since the predicted percentage was derived from a series of predicted values, it is uncertain whether the predicted field goal percentage will hold true for the 2023-2024 NBA Season.</p>
 
 
 </section>
