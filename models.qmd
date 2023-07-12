@@ -52,6 +52,7 @@ fit_obj
 
 This fitted model of the data was then used to create the posterior estimated prediction model. The Posterior Estimated Prediction model calculates the predicted value based on the data the model was given:
 
+
 ```{r}
 
 newobs <- tibble(.rows = 1)
@@ -68,6 +69,7 @@ pe
 # Calculates the 95% confidence interval, using the quantile() function
 confidence_interval <- quantile(pe1, c(0.025, 0.975))
 ```
+
 
 All of the values above are predicted values of the Chicago Bulls' 2023-2024 Field Goal Percentage. Taking the average of these values reveals the most accurate prediction, which is 48.7%. This means that the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season is 48.7%, given that each player has played more than 30 games during the season.
 
