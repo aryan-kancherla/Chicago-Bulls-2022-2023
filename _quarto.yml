@@ -7,8 +7,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - players.qmd
       - models.qmd
+      - players.qmd
       - about.qmd
       - sources.qmd
 
