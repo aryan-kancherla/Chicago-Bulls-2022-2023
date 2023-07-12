@@ -80,7 +80,7 @@ pe |>
   
        labs(title = "The Chicago Bulls Predicted Field Goal % for the 2023-2024 NBA Season",
          subtitle = "It is likely that the Field Goal Percentage will be 48.7% next season",
-         x = "Estimated FG%",
+         x = "Predicted FG%",
          y = "Probability",
          caption = "Source: FantasyPros"
          ) +

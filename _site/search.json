@@ -60,14 +60,14 @@
     "href": "players.html",
     "title": "players",
     "section": "",
-    "text": "The interactive scatterplot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season."
+    "text": "The interactive scatter plot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season."
   },
   {
     "objectID": "players.html#plot-summary",
     "href": "players.html#plot-summary",
     "title": "players",
     "section": "Plot Summary",
-    "text": "Plot Summary\nThe scatterplot above shows that out of all the Chicago Bulls players that had played at least 1000 minutes, Nikola Vucevic had the highest FG%. I believe this result to be accurate as Nikola Vucevic has played a significant amount of minutes (2746 to be exact) during the 2022-2023 NBA Season. Also, Vucevic’s position (Center) requires him to take frequent layups, dunks, and mid-range shots, validating his FG%."
+    "text": "Plot Summary\nThe scatter plot above shows that out of all the Chicago Bulls players that had played at least 1000 minutes, Nikola Vucevic had the highest FG%. I believe this result to be accurate as Nikola Vucevic has played a significant amount of minutes (2746 to be exact) during the 2022-2023 NBA Season. Also, Vucevic’s position (Center) requires him to take frequent layups, dunks, and mid-range shots, validating his FG%."
   },
   {
     "objectID": "sources.html",
