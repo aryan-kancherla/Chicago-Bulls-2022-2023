@@ -9,8 +9,6 @@ execute:
 
 To answer this question, I filtered the data, selecting all the players of the Chicago Bulls that have played more than 30 games. Using this data, I then created a fitted model, using the Field Goal Percentage of each player as the parameter:
 
-
-
 ```{r}
 #| message: false
 #| warning: false
@@ -48,10 +46,7 @@ fit_obj <- stan_glm(data = NBA_Data,
 fit_obj
 ```
 
-
-
 This fitted model of the data was then used to create the posterior estimated prediction model. The Posterior Estimated Prediction model calculates the predicted value based on the data the model was given:
-
 
 ```{r}
 
@@ -70,14 +65,11 @@ pe
 confidence_interval <- quantile(pe1, c(0.025, 0.975))
 ```
 
-
-All of the values above are predicted values of the Chicago Bulls' 2023-2024 Field Goal Percentage. Taking the average of these values reveals the most accurate prediction, which is 48.7%. This means that the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season is 48.7%, given that each player has played more than 30 games during the season.
+All of the values above are predicted values of the Chicago Bulls' 2023-2024 Field Goal Percentage. Taking the average of these values reveals the most accurate prediction, which is 48.7%. This means that the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season is [48.7%]{.underline}, given that each player has played more than 30 games during the season.
 
 ## However...
 
 There is a level of uncertainty associated to this result. Since the predicted percentage was derived from a series of predicted values, it is uncertain whether the predicted field goal percentage will hold true for the 2023-2024 NBA Season. Because of this, I have calculated a confidence interval using the formula below:
-
-
 
 ```{r}
 #| message: false
@@ -87,6 +79,4 @@ knitr::include_graphics("image-folder/formula.png")
 
 ```
 
-
-
-With 95% confidence, the Chicago Bulls predicted Field Goal Percentage for the 2023-2024 NBA Season is between **45.8%** and **51.8%**.
+With 95% confidence, the Chicago Bulls predicted Field Goal Percentage for the 2023-2024 NBA Season is between [**45.8%**]{.underline} and [**51.8%**]{.underline}.
