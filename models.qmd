@@ -25,18 +25,29 @@ NBA_Data_1 <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   Team = col_character(),
   Positions = col_character()
   )
+  
+  #Filtered the data, analyzing Chicago Bull players who have played more than 30 games. Then, selecting the "Player" and "FG%" columns from the data
+
 ) |> 
   filter(Team == "CHI") |>
     filter(`GP` > 30) |>
       select(`Player`, `FG%`, Positions)
 
+
+#Added Jevon Carter to the data, as he was recently signed by the Chicago Bulls this offseason
+
 new_row <- tibble(Player = "JeVon Carter", `FG%` = 0.423, Positions = "PG,SG")
 NBA_Data <- add_row(NBA_Data_1, .before = 1, !!!new_row)
+
 ```
 
 ```{r}
 #| message: false
 #| warning: false
+
+
+# Created a one-parameter fitted model
+
 fit_obj <- stan_glm(data = NBA_Data, 
                     formula = `FG%` ~ 1, 
                     family = gaussian, 
@@ -58,11 +69,17 @@ pe <- pe1 |> as_tibble()
 
 pe
 
+# pe is now a tibble which holds all the predicted values of the Chicago Bulls' Field Goal Percentage
+
+
 ```
 
 ```{r}
+
 # Calculates the 95% confidence interval, using the quantile() function
+
 confidence_interval <- quantile(pe1, c(0.025, 0.975))
+
 ```
 
 All of the values above are predicted values of the Chicago Bulls' 2023-2024 Field Goal Percentage. Taking the average of these values reveals the most accurate prediction, which is 48.7%. This means that the predicted Field Goal Percentage of the Chicago Bulls for the 2023-2024 NBA Season is [48.7%]{.underline}, given that each player has played more than 30 games during the season.
@@ -74,6 +91,9 @@ There is a level of uncertainty associated to this result. Since the predicted p
 ```{r}
 #| message: false
 #| warning: false
+
+#Used the knitr package and include_graphics() to import a picture of the quantile() formula
+
 library(knitr)
 knitr::include_graphics("image-folder/formula.png")
 

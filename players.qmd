@@ -13,7 +13,7 @@ library(ggplot2)
 library(plotly)
 ```
 
-The interactive scatterplot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season.
+The interactive scatter plot below shows the individual Field Goal Percentages (FG%) of Chicago Bulls players who have played at least 1000 minutes during the 2022-2023 NBA Season.
 
 ```{r}
 #| message: false
@@ -47,16 +47,16 @@ BullsPlayerPlot <- NBA_Data |>
         )) +
       geom_point(stat = "identity") + 
           labs(
+            title = "Individual Player Field Goal Percentages for the 2022-2023 NBA Season",
             x = "Players",
             y = "Field Goal Percentage",
             caption = "Source: FantasyPros"
           ) + theme_classic() + 
           theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
 
-ggplotly(BullsPlayerPlot, tooltip = "text") |>
-  layout(title = list(text = paste('Individual Player Field Goal Percentages for the 2022-2023 NBA Season', '<br>', '<sup>', 'Vucevic had the highest field goal percentage(52%)', '</sup>')))
+ggplotly(BullsPlayerPlot, tooltip = "text")
 ```
 
 ## Plot Summary
 
-The scatterplot above shows that out of all the Chicago Bulls players that had played at least 1000 minutes, Nikola Vucevic had the highest FG%. I believe this result to be accurate as Nikola Vucevic has played a significant amount of minutes (2746 to be exact) during the 2022-2023 NBA Season. Also, Vucevic's position (Center) requires him to take frequent layups, dunks, and mid-range shots, validating his FG%.
+The scatter plot above shows that out of all the Chicago Bulls players that had played at least 1000 minutes, Nikola Vucevic had the highest FG%. I believe this result to be accurate as Nikola Vucevic has played a significant amount of minutes (2746 to be exact) during the 2022-2023 NBA Season. Also, Vucevic's position (Center) requires him to take frequent layups, dunks, and mid-range shots, validating his FG%.

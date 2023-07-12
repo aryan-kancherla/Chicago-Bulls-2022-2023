@@ -16,36 +16,42 @@ library(ggplot2)
 ```{r}
 #| message: false
 #| warning: false
+
+# Importing the csv file and changing the column types of the "Players", "Team", and "Position" columns to characters
+
 NBA_Data_1 <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   Player = col_character(),
   Team = col_character(),
   Positions = col_character()
   ) 
   
-  # Importing the csv file and changing the column types of the "Players", "Team", and "Position" columns to characters
+  #Filtered the data, analyzing Chicago Bull players who have played more than 30 games. Then, selecting the "Player" and "FG%" columns from the data
   
 ) |>
   filter(Team == "CHI") |>
     filter(`GP` > 30) |>
       select(`Player`, `FG%`)
 
-new_row <- tibble(Player = "JeVon Carter", `FG%` = 0.423)
+#Added Jevon Carter to the data, as he was recently signed by the Chicago Bulls this offseason
+
+
+new_row <- tibble(Player = "Jevon Carter", `FG%` = 0.423)
 NBA_Data <- add_row(NBA_Data_1, .before = 1, !!!new_row)
 
-#Filtered the data, analyzing Chicago Bull players who have played more than 30 games. Then, selecting the "Player" and "FG%" columns from the data
 
 ```
 
 ```{r}
 #| message: false
 
+# Created the fitted model, using a one parameter model
+
+
 fit_obj <- stan_glm(data = NBA_Data, 
                     formula = `FG%` ~ 1, 
                     family = gaussian, 
                     refresh = 0,
                     seed = 9)
-
-# Created the fitted model, using a one parameter model
 
 newobs <- tibble(.rows = 1)
 
@@ -60,11 +66,17 @@ pe <- posterior_epred(object = fit_obj, newdata = newobs) |>
 pe |> 
   ggplot(aes(x = `1`)) +
     geom_histogram(aes(y = after_stat(count/sum(count))), fill = "red", color = "black", bins = 100) +
-      geom_vline(xintercept = mean(pe$`1`), linetype = "dotted", lwd = 1.5) +
-        
-      #Used geom_vline (the black dotted line on the histogram) to display the predicted FG% of the Chicago Bulls for the 2023-2024 NBA Season 
   
-      #the xintercept value is the mean of all the predicted values, which is the predicted FG% of the Bulls
+  #Used geom_vline (the black dotted line on the histogram) to display the predicted FG% of the Chicago Bulls for the 2023-2024 NBA Season 
+  
+      # the xintercept value is the mean of all the predicted values, which is the predicted FG% of the Bulls
+  
+      geom_vline(xintercept = mean(pe$`1`), linetype = "dotted", lwd = 1.5) +
+  
+    # Used the annotate() function to create a label for the vline, setting the x-value of the label at the mean of the data.
+
+  
+      annotate("text", x = mean(pe$`1`), y= 0.015, label = "Mean: 0.4872186", angle = 0, color = "white") +
   
        labs(title = "The Chicago Bulls Predicted Field Goal % for the 2023-2024 NBA Season",
          subtitle = "It is likely that the Field Goal Percentage will be 48.7% next season",
@@ -72,10 +84,19 @@ pe |>
          y = "Probability",
          caption = "Source: FantasyPros"
          ) +
-  scale_x_continuous(labels = scales::number_format(accuracy = 0.01))+
-          scale_y_continuous(labels = scales::percent_format()) +
-            theme_classic()
+  
+  # Used scale_x_continuous to format the x-axis ticks
+  # accuracy() is used to accurately create the x-axis ticks
+  
+  scale_x_continuous(labels = scales::number_format(accuracy = 0.01)) +
+  
+  
+    # used the theme() function to hide the y-axis, as it is not needed for this graph
 
+            theme_classic() + 
+              theme(axis.title.y = element_blank(),
+               axis.text.y = element_blank(),
+               axis.ticks.y = element_blank())
 ```
 
 ## Plot Summary
