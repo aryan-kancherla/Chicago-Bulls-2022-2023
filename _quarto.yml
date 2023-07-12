@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Chicago Bulls 2022-2023 Data"
+  title: "Chicago Bulls Data"
   navbar:
     left:
       - href: index.qmd
