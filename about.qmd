@@ -8,7 +8,7 @@ My name is Aryan Kancherla, a rising senior at Metea Valley High School. Some of
 
 ## About This Project
 
-My passion of basketball led me to analyze the Chicago Bulls' Field Goal Percentage data. From the knowledge I obtained through [Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/), a 6-week data science course, I was able to analyze and create graphs & models, coming up with interesting results.
+My passion of basketball led me to analyze the Chicago Bulls' Field Goal Percentage data. From the knowledge I obtained through [Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/), a 6-week data science course, I was able to predict the Chicago Bulls 2023-2024 Field Goal Percentage.
 
 ## Contact Information
 
