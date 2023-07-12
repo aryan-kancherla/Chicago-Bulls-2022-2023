@@ -71,12 +71,16 @@ All of the values above are predicted values of the Chicago Bulls' 2023-2024 Fie
 
 There is a level of uncertainty associated to this result. Since the predicted percentage was derived from a series of predicted values, it is uncertain whether the predicted field goal percentage will hold true for the 2023-2024 NBA Season. Because of this, I have calculated a confidence interval using the formula below:
 
-```{r fig.width=100, fig.height=100}
+
+
+```{r}
 #| message: false
 #| warning: false
 library(knitr)
 knitr::include_graphics("image-folder/formula.png")
 
 ```
+
+
 
 With 95% confidence, the Chicago Bulls predicted Field Goal Percentage for the 2023-2024 NBA Season is between **45.8%** and **51.8%**.
