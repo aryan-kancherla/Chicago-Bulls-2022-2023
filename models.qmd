@@ -9,6 +9,8 @@ execute:
 
 To answer this question, I filtered the data, selecting all the players of the Chicago Bulls that have played more than 30 games. Using this data, I then created a fitted model, using the Field Goal Percentage of each player as the parameter:
 
+
+
 ```{r}
 #| message: false
 #| warning: false
@@ -45,6 +47,8 @@ fit_obj <- stan_glm(data = NBA_Data,
 
 fit_obj
 ```
+
+
 
 This fitted model of the data was then used to create the posterior estimated prediction model. The Posterior Estimated Prediction model calculates the predicted value based on the data the model was given:
 
