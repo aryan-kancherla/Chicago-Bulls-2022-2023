@@ -9,7 +9,6 @@ execute:
 #| message: false
 library(tidyverse)
 library(rstanarm)
-library(readr)
 library(ggplot2)
 library(plotly)
 ```
@@ -19,7 +18,7 @@ The interactive scatterplot below shows the individual Field Goal Percentages (F
 ```{r}
 #| message: false
 #| warning: false
-NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
+NBA_Data_1 <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
   Player = col_character(),
   Team = col_character(),
   Positions = col_character()
@@ -27,7 +26,12 @@ NBA_Data <- read_csv("data/NBA-2022-2023-Data.csv", col_types = cols(
 ) |>
   filter(Team == "CHI") |>
     arrange(desc(MIN))|>
-      filter(MIN > 850)
+      filter(MIN >= 1000) |>
+        select(Player, `FG%`, Positions)
+
+new_row <- tibble(Player = "JeVon Carter", `FG%` = 0.423, Positions = "PG,SG")
+NBA_Data <- add_row(NBA_Data_1, .before = 1, !!!new_row)
+
 
 
 ```
@@ -39,7 +43,7 @@ BullsPlayerPlot <- NBA_Data |>
         x = Player, 
         y = `FG%`,
         fill = Player,
-        text = paste("Player: ", Player, "\n", "Position: ", Positions, "\n", "FG%: ", (`FG%` * 100),  sep = "")
+        text = paste("Position: ", Positions, "\n", "FG%: ", (`FG%` * 100),  sep = "")
         )) +
       geom_point(stat = "identity") + 
           labs(
@@ -47,7 +51,7 @@ BullsPlayerPlot <- NBA_Data |>
             y = "Field Goal Percentage",
             caption = "Source: FantasyPros"
           ) + theme_classic() + 
-          theme(axis.text.x = element_text(angle = 45, hjust = 1))
+          theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
 
 ggplotly(BullsPlayerPlot, tooltip = "text") |>
   layout(title = list(text = paste('Individual Player Field Goal Percentages for the 2022-2023 NBA Season', '<br>', '<sup>', 'Vucevic had the highest field goal percentage(52%)', '</sup>')))
